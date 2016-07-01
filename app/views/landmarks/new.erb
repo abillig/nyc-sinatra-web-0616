@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<form method="POST" action="/landmarks"> 
+<label>Name</label><input type="text" name="landmark[name]" id="figure_name">
+<h2><label>Title</label></h2>
+
+<label>Create or select a name</label>
+
+<input type="text" name="landmark[name]" id="landmark_name">
+
+<label>aaaand a year completed? </label>
+
+
+<input type="text" name="landmark[year_completed]" id="landmark_year_completed">
+
+<h2><label>Landmark</label></h2>
+<label>Create or select a landmark</label>
+<input type="text" name="figure[name]" id="new_figure">
+<% @figures.each do |figure|%>
+<p><%=figure.name%>
+<input id="figure_<%=figure.id%>" type="checkbox" name="landmark[figure_ids][]" value=<%=figure.id%>>
+</p>
+<% end %>
+
+<input type="submit" value = "Create New Landmark">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+
+<%=@figure.name%>
+
+<% @figure.titles.each do |title|%>
+<%=title.name%>
+<% end%>
+
+<% @figure.landmarks.each do |landmark|%>
+<%=landmark.name%>
+<% end%>
+
+
+</body>
+</html>
